@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            },
+            "justMyCode": true,
+            "cwd": "${fileDirname}", // debug时切换工作路径至当前路径
+            "args": [ // 设置命令行参数
+                // "--test"
+                // "--run_id","debug",
+                "--mode" ,"train",
+                "--use_cpu",
+                // "--model", "Transformer", "--save_path", "save/Transformer/"
+                // "--run_mode", "mean_score"
+            ]
+        }
+    ]
+}
